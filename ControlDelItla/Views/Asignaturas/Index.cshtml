@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ControlDelItla.Models.TableView.AsignaturaView>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Asignaturas</h2>
+<a href="~/Asignaturas/Crear" class="btn btn-success"><i class="far fa-user">Crear Asignatura</i></a>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Nombre
+                </th>
+                
+                <th>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cell in Model)
+            {
+                <tr>
+                    <td>
+                        @cell.Id
+                    </td>
+                    <td>
+                        @cell.Nombre
+                    </td>
+                    
+                    <td>
+                        <a href="~/Asignaturas/Editar/@cell.Id"><i class="far fa-edit"></i></a>
+                        <a href="~/Asignaturas/Borrar/@cell.Id"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

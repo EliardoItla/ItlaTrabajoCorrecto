@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ControlItlaModelStoreContainer" CdmEntityContainer="ControlItlaEntities">
+    <EntitySetMapping Name="Asignaturas">
+      <EntityTypeMapping TypeName="ControlItlaModel.Asignatura">
+        <MappingFragment StoreEntitySet="Asignatura">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estudiantes">
+      <EntityTypeMapping TypeName="ControlItlaModel.Estudiante">
+        <MappingFragment StoreEntitySet="Estudiante">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstudianteAsignaturas">
+      <EntityTypeMapping TypeName="ControlItlaModel.EstudianteAsignatura">
+        <MappingFragment StoreEntitySet="EstudianteAsignatura">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesors">
+      <EntityTypeMapping TypeName="ControlItlaModel.Profesor">
+        <MappingFragment StoreEntitySet="Profesor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfesorAsignaturas">
+      <EntityTypeMapping TypeName="ControlItlaModel.ProfesorAsignatura">
+        <MappingFragment StoreEntitySet="ProfesorAsignatura">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK__Estudiant__idAsi__2E1BDC42" TypeName="ControlItlaModel.FK__Estudiant__idAsi__2E1BDC42" StoreEntitySet="EstudianteAsignatura">
+      <EndProperty Name="Asignatura">
+        <ScalarProperty Name="Id" ColumnName="idAsignatura" />
+      </EndProperty>
+      <EndProperty Name="EstudianteAsignatura">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="idAsignatura" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__ProfesorA__idAsi__2A4B4B5E" TypeName="ControlItlaModel.FK__ProfesorA__idAsi__2A4B4B5E" StoreEntitySet="ProfesorAsignatura">
+      <EndProperty Name="Asignatura">
+        <ScalarProperty Name="Id" ColumnName="idAsignatura" />
+      </EndProperty>
+      <EndProperty Name="ProfesorAsignatura">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="idAsignatura" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__Estudiant__idEst__2D27B809" TypeName="ControlItlaModel.FK__Estudiant__idEst__2D27B809" StoreEntitySet="EstudianteAsignatura">
+      <EndProperty Name="Estudiante">
+        <ScalarProperty Name="Id" ColumnName="idEstudiante" />
+      </EndProperty>
+      <EndProperty Name="EstudianteAsignatura">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="idEstudiante" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FK__ProfesorA__idPro__29572725" TypeName="ControlItlaModel.FK__ProfesorA__idPro__29572725" StoreEntitySet="ProfesorAsignatura">
+      <EndProperty Name="Profesor">
+        <ScalarProperty Name="Id" ColumnName="idProfesor" />
+      </EndProperty>
+      <EndProperty Name="ProfesorAsignatura">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="idProfesor" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

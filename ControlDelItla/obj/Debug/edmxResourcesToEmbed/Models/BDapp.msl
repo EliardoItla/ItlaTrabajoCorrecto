@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ControlItlaModelStoreContainer" CdmEntityContainer="ControlItlaEntities2">
+    <EntitySetMapping Name="Asignaturas">
+      <EntityTypeMapping TypeName="ControlItlaModel.Asignatura">
+        <MappingFragment StoreEntitySet="Asignatura">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estudiantes">
+      <EntityTypeMapping TypeName="ControlItlaModel.Estudiante">
+        <MappingFragment StoreEntitySet="Estudiante">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstudianteAsignaturas">
+      <EntityTypeMapping TypeName="ControlItlaModel.EstudianteAsignatura">
+        <MappingFragment StoreEntitySet="EstudianteAsignatura">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idEstudiante" ColumnName="idEstudiante" />
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesors">
+      <EntityTypeMapping TypeName="ControlItlaModel.Profesor">
+        <MappingFragment StoreEntitySet="Profesor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfesorAsignaturas">
+      <EntityTypeMapping TypeName="ControlItlaModel.ProfesorAsignatura">
+        <MappingFragment StoreEntitySet="ProfesorAsignatura">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idProfesor" ColumnName="idProfesor" />
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

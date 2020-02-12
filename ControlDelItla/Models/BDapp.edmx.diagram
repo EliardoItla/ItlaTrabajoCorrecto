@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="999b4280f5314a179a949c9142fc75a0" Name="Diagram1">
+        <EntityTypeShape EntityType="ControlItlaModel.Asignatura" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlItlaModel.Estudiante" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlItlaModel.EstudianteAsignatura" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlItlaModel.Profesor" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlItlaModel.ProfesorAsignatura" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="ControlItlaModel.FK__Estudiant__idAsi__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlItlaModel.FK__ProfesorA__idAsi__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlItlaModel.FK__Estudiant__idEst__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlItlaModel.FK__ProfesorA__idPro__29572725" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
